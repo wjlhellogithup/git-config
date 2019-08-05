@@ -1,9 +1,14 @@
 spring:
   application:
     name: order-service
+    rabbitmq:
+    host: 192.168.26.132
+    port: 5672
+    username: admin
+    password: admin
     
-#server:
-#  port: 8201
+server:
+  port: 8201
   
 eureka:
   client:
@@ -18,7 +23,7 @@ management:
     web:
       exposure:
         include: hystrix.stream
-        
+
 ---
 spring:
   profiles: order1
